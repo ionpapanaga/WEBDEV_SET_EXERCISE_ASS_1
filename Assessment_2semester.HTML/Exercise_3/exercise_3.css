@@ -1,7 +1,7 @@
 /* Base page styling: sets overall look of the page */
 body {
     margin: 0;
-    /* Removes default browser margin */
+    /* Removes default browser margin */ 
     background-color: #e6e6e6;
     /* Light grey background */
     font-family: Georgia, serif;
