@@ -1,175 +1,244 @@
-/* ===== BODY ===== */
+/*  SKIP LINK
+   Hidden above the page until Tab is pressed
+   then drops into view for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 9999;
+    transition: top 0.2s;
+}
 
-body {
-    background-color: #ff69b4;
-    /* Bright pink background - matches the screenshot */ 
-
-    font-family: Arial, sans-serif;
-    /* Clean readable font */
-
-    font-size: 18px;
-    /* Base font size */
-
-    max-width: 420px;
-    /* Narrow width like in the screenshot - keeps it centered and compact */
-
-    margin: 0 auto;
-    /* Centers the page horizontally */
-
-    padding: 15px;
-    /* Breathing room around the edges */
+/* brings the skip link into view when focused */
+.skip-link:focus {
+    top: 0;
 }
 
 
-/* ===== HEADER ===== */
+/* BODY
+   gradient goes from bright blue at the top
+   to dark navy at the bottom
+   background-attachment fixed means it shifts
+   smoothly as you scroll down the page */
+body {
+    background: linear-gradient(
+        to bottom,
+        #4fc3f7,   /* bright sky blue */
+        #0288d1,   /* mid blue */
+        #01579b,   /* deeper blue */
+        #0a1628    /* dark navy */
+    );
+    background-attachment: fixed;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* centres each section and limits how wide it gets */
+header,
+main,
+footer {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
 
 header {
-    position: relative;
-    /* Lets us position the cart icon relative to the header */
-
+    position: relative; /* needed so the cart can be positioned inside it */
     text-align: center;
-    /* Centers the divider image */
-
-    padding: 5px 0;
+    padding-top: 18px;
+    padding-bottom: 14px;
 }
 
-header img {
-    width: 250px;
-    /* Small decorative divider image */
+/* main site title */
+header h1 {
+    font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); /* soft shadow behind the text */
+    margin: 0 0 10px 0;
+}
 
+/* decorative divider image below the title */
+img.divider {
+    width: 260px;
     display: block;
-    /* Lets margin auto center it */
-
-    margin: 0 auto;
-    /* Centers the divider image */
+    margin: 0 auto 14px auto;
+    opacity: 0.85;
 }
 
-header a {
+
+/*  NAVIGATION
+   all three links on one line spread across the full width */
+header nav ul {
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+    display: flex;                  /* puts links in a row */
+    justify-content: space-between; /* spreads them across the full width */
+}
+
+/* individual nav links */
+header nav a {
+    color: #ffffff;
+    font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+    font-size: 1.25rem;     /* bigger than the original */
+    letter-spacing: 1.5px;  /* a little space between letters */
+    text-decoration: none;
+    padding: 4px 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+/* underline appears when you hover over a link */
+header nav a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* outline shows when you tab to a link with the keyboard */
+header nav a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* cart icon pinned to the top right corner of the header */
+.cart-link {
     position: absolute;
-    /* Pulls the cart out of the normal flow */
-
-    top: 5px;
-    /* Distance from the top of the header */
-
-    right: 0;
-    /* Pins it to the right edge */
+    top: 18px;
+    right: 15px;
 }
 
-header a img {
-    width: 40px;
-    /* Small cart icon */
-}
-
-
-/* ===== PHOTO CARDS ===== */
-
-article {
-    margin-bottom: 0;
-    /* No gap between cards - they sit right on top of each other */
-}
-
-article img {
-    width: 100%;
-    /* Photo fills the full width of the card */
-
-    height: auto;
-    /* Keeps photo proportions correct */
-
+/* makes the cart icon white so it shows on the blue background */
+.cart-link img {
+    width: 42px;
     display: block;
-    /* Removes the gap under images */
+    filter: brightness(0) invert(1);
+}
+
+/* outline when the cart link is focused by keyboard */
+.cart-link:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 
-/* ===== PHOTO CAPTIONS ===== */
+/* MAIN CONTENT AREA*/
+main {
+    padding-top: 14px;
+}
 
-article p {
-    background-color: #fffde7;
-    /* Light yellow background behind the caption */
+/* gallery section heading */
+main h2 {
+    font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
 
-    color: #00bcd4;
-    /* Cyan blue text colour - matches the screenshot */
 
-    font-weight: bold;
-    /* Bold text like in the screenshot */
+/* PHOTO CARDS
+   each card has a semi-transparent background
+   and rounded corners */
+.photo-card {
+    margin-bottom: 18px;
+    background-color: rgba(255, 255, 255, 0.08); /* very faint white panel */
+    border-radius: 6px;
+    overflow: hidden; /* keeps the image inside the rounded corners */
+}
 
-    font-size: 1rem;
-    /* Normal readable size */
-
-    padding: 8px 10px;
-    /* Space inside the caption box */
-
+/* photo title at the top of each card */
+.photo-card h3 {
+    font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+    font-size: 1.1rem;
+    font-weight: normal;
+    letter-spacing: 1px;
     margin: 0;
-    /* No gap around the caption */
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.25); /* dark strip behind the title */
 }
 
+/* removes default browser spacing around figure */
+.photo-card figure {
+    margin: 0;
+    padding: 0;
+}
 
-/* ===== BUTTON ===== */
-
-button {
-    background-color: #e0e0e0;
-    /* Light grey button */
-
-    border: 1px solid #999;
-    /* Thin border around the button */
-
-    padding: 4px 10px;
-    /* Small padding - matches the compact button in the screenshot */
-
-    font-size: 0.75rem;
-    /* Small text inside the button - matches the screenshot */
-
-    cursor: pointer;
-    /* Hand cursor when hovering */
-
+/* photos are taller than the original and crop to fill the space neatly */
+.photo-card img {
+    width: 100%;
+    height: 380px;      /* taller than original */
+    object-fit: cover;  /* crops the image to fit without stretching */
     display: block;
-    /* Makes the button sit on its own line */
-
-    margin-bottom: 10px;
-    /* Small gap below the button before the next photo */
 }
 
+
+.photo-card figcaption {
+    background-color: #fffde7; /* light yellow */
+    color: #00526a;            /* dark teal */
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 12px;
+    margin: 0;
+}
+
+
+/*  BUTTONS*/
+button {
+    background-color: rgba(255, 255, 255, 0.18); /* faint white */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    padding: 8px 14px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    width: 100%; /* stretches to match the card width */
+    transition: background-color 0.2s;
+}
+
+/* gets slightly brighter when you hover over it */
 button:hover {
-    background-color: #c8c8c8;
-    /* Slightly darker when hovered */
+    background-color: rgba(255, 255, 255, 0.32);
+}
+
+/* outline shows when the button is focused by keyboard */
+button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
 }
 
 
-/* ===== FOOTER ===== */
 
 footer {
-    margin-top: 10px;
-    /* Gap above the footer */
-
-    font-size: 1rem;
-    /* Normal size text */
-
-    font-weight: bold;
-    /* Copyright text is bold - matches the screenshot */
+    margin-top: 16px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
+/* copyright line */
 footer p {
-    margin: 0 0 5px 0;
-    /* Small gap below the copyright line */
-}
-
-footer nav a {
-    display: list-item;
-    /* Each link on its own line with a bullet */
-
-    list-style-type: disc;
-    /* Adds the bullet point */
-
-    margin-left: 20px;
-    /* Indents the links to line up with the bullets */
-
-    color: #0000ee;
-    /* Blue link colour */
-
-    font-weight: normal;
-    /* Normal weight - not bold like the copyright */
-
-    font-size: 1rem;
-
-    text-decoration: underline;
-    /* Underlined like in the screenshot */
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+    opacity: 0.8;
+    margin: 0;
 }
