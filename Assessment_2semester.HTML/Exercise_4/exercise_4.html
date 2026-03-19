@@ -1,102 +1,162 @@
-<!DOCTYPE html> 
-<!-- Tells the browser this is an HTML5 page -->
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Settings area - nothing here shows on screen -->
-
     <meta charset="UTF-8">
-    <!-- Stops weird symbols breaking on the page -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Wondering Photographer</title>
-    <!-- Shows up on the browser tab -->
-
     <link rel="stylesheet" href="style.css">
-    <!-- Connects our CSS file so the page gets styled -->
-
 </head>
 
 <body>
-<!-- Everything inside here is what the user sees -->
+
+    <!-- Skip link - lets keyboard users jump past the header straight to the content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 
-    <!-- ===== HEADER ===== -->
+    <!-- HEADER - contains the site title, decorative image, nav and cart link -->
     <header>
-        <!-- Small decorative divider image centered at top -->
-        <img src="TheDivider.png" alt="The Wondering Photographer">
 
-        <!-- Cart icon pushed to the right -->
-        <a href="checkout.html">
-            <img src="shopping.svg" alt="Shopping cart">
+        <!-- h1 gives the page its main title - every page needs exactly one h1 -->
+        <h1>The Wondering Photographer</h1>
+
+        <!-- alt="" because this is decorative - screen readers skip it -->
+        <img src="TheDivider.png" alt="" class="divider">
+
+        <!-- Main navigation - ul and li give proper list structure -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About me</a></li>
+            </ul>
+        </nav>
+
+        <!-- aria-label describes what the link does, not just what the icon looks like -->
+        <!-- img alt="" because the link aria-label already covers the purpose -->
+        <a href="checkout.html" aria-label="Go to checkout page" class="cart-link">
+            <img src="shopping.svg" alt="">
         </a>
+
     </header>
 
 
-    <!-- ===== MAIN GALLERY ===== -->
-    <main>
-    <!-- All four photo cards stacked on top of each other -->
+    <!-- MAIN - id="main-content" is the target for the skip link above -->
+    <main id="main-content">
+
+        <!-- h2 gives screen reader users a heading to navigate to inside main -->
+        <h2>Photo Gallery</h2>
 
 
-        <!-- --- PHOTO CARD 1 --- -->
-        <article>
-            <img src="OceanPhoto.jpg" alt="Greenland coast">
-            <!-- Ocean photo -->
+        <!-- PHOTO CARD 1 -->
+        <!-- article is the correct semantic element for self-contained content -->
+        <article class="photo-card">
 
-            <p>This was from a fabulous trip to the cost of Greenland with my family. The water was lovely- but very cold!</p>
-            <!-- Caption in cyan bold text on light yellow background -->
+            <!-- h3 because it sits inside the h2 Photo Gallery section -->
+            <h3>Greenland Coast</h3>
 
-            <button type="button">Add to basket</button>
-            <!-- Small grey button below the caption -->
+            <!-- figure groups the image and caption together semantically -->
+            <figure>
+
+                <!-- Descriptive alt text tells screen reader users what is in the photo -->
+                <img
+                    src="OceanPhoto.jpg"
+                    alt="Two people sitting on white chalk cliffs above a calm turquoise sea at sunset">
+
+                <!-- figcaption labels the caption as belonging to this image -->
+                <figcaption>
+                    <!-- Typo fixed: original said "cost of Greenland" not "coast" -->
+                    This was from a fabulous trip to the coast of Greenland with my family.
+                    The water was lovely — but very cold!
+                </figcaption>
+
+            </figure>
+
+            <!-- aria-label makes each button unique so screen readers can tell them apart -->
+            <!-- Without this all four buttons just say "Add to basket" with no context -->
+            <button type="button" aria-label="Add Greenland coast photo to basket">
+                Add to basket
+            </button>
+
         </article>
 
 
-        <!-- --- PHOTO CARD 2 --- -->
-        <article>
-            <img src="BridgePhoto.jpg" alt="Golden Gate Bridge">
-            <!-- Golden Gate Bridge photo -->
+        <!-- PHOTO CARD 2 -->
+        <article class="photo-card">
 
-            <p>A picture of the Golden Gate Bridge. New York! New York!</p>
+            <h3>Golden Gate Bridge</h3>
 
-            <button type="button">Add to basket</button>
+            <figure>
+
+                <img
+                    src="BridgePhoto.jpg"
+                    alt="Looking straight up at a tall red steel tower of the Golden Gate Bridge against a blue sky">
+
+                <figcaption>
+                    <!-- Factual error fixed: original said New York - the bridge is in San Francisco -->
+                    A picture of the Golden Gate Bridge in San Francisco, California.
+                </figcaption>
+
+            </figure>
+
+            <button type="button" aria-label="Add Golden Gate Bridge photo to basket">
+                Add to basket
+            </button>
+
         </article>
 
 
-        <!-- --- PHOTO CARD 3 --- -->
-        <article>
-            <img src="ValleyPhoto.jpg" alt="Greenland river valley">
-            <!-- Greenland valley photo -->
+        <!-- PHOTO CARD 3 -->
+        <article class="photo-card">
 
-            <p>Another great photo from Greenland. It's a river valley where a glacier used to be.</p>
+            <h3>Greenland Valley</h3>
 
-            <button type="button">Add to basket</button>
+            <figure>
+
+                <img
+                    src="ValleyPhoto.jpg"
+                    alt="A wide valley with a deep blue fjord surrounded by rocky mountains under a cloudy sky">
+
+                <figcaption>
+                    Another great photo from Greenland.
+                    It is a river valley where a glacier used to be.
+                </figcaption>
+
+            </figure>
+
+            <button type="button" aria-label="Add Greenland valley photo to basket">
+                Add to basket
+            </button>
+
         </article>
 
 
-        <!-- --- PHOTO CARD 4 --- -->
-        <article>
-            <img src="WaterfallPhoto.jpg" alt="Waterfall">
-            <!-- Waterfall photo -->
+        <!-- PHOTO CARD 4 -->
+        <article class="photo-card">
 
-            <p>The waterfall made such a lovely sound. I could have fallen asleep!</p>
+            <h3>Waterfall</h3>
 
-            <button type="button">Add to basket</button>
+            <figure>
+
+                <img
+                    src="WaterfallPhoto.jpg"
+                    alt="A powerful waterfall crashing down into a misty pool surrounded by green mossy rocks">
+
+                <figcaption>
+                    The waterfall made such a lovely sound. I could have fallen asleep!
+                </figcaption>
+
+            </figure>
+
+            <button type="button" aria-label="Add waterfall photo to basket">
+                Add to basket
+            </button>
+
         </article>
 
     </main>
-
-
-    <!-- ===== FOOTER ===== -->
     <footer>
-        <!-- Copyright text bold on the left -->
         <p>Copyright The Wondering Photographer 2018.</p>
-
-        <nav>
-            <!-- Three links displayed as a bullet list -->
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About me</a>
-        </nav>
     </footer>
 
 </body>
