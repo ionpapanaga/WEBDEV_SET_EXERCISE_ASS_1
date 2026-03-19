@@ -1,0 +1,75 @@
+/* Base page */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+/* Header */
+header {
+    background-color: #cfcfcf;
+    padding: 25px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+}
+
+/* Navigation */
+nav a {
+    color: blue;
+    text-decoration: underline;
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph under title */
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Aside box */
+aside {
+    background-color: #d9d9d9;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #cfcfcf;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+

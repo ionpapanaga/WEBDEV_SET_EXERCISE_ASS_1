@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Sets the title that appears in the browser tab -->
+    <title>J's Gallery</title>
+
+    <!-- Connects this HTML file to the external CSS file for styling -->
+    <link rel="stylesheet" href="exercise_3.css">
+</head>
+
+<body>
+
+    <!-- Header section: contains the main page title and navigation menu -->
+    <header>
+        <h1>J's Gallery</h1>
+
+        <!-- Navigation bar: links to different sections/pages -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Main content area of the webpage -->
+    <main>
+
+        <!-- Intro section: includes text and a featured image -->
+        <section class="top-section">
+
+            <!-- Article element used to group the main text content -->
+            <article class="text-content">
+
+                <!-- Image floated beside the text (styled in CSS) -->
+                <img src="COW.jpg" alt="Shaggy cow standing on a rocky beach" class="cow-image">
+
+                <!-- First paragraph of placeholder (lorem ipsum) text -->
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent mollis adipiscing per id libero
+                    libero.
+                    Tempus pretium netus molestie scelerisque facilisis tristique volutpat ultricies. Nostra ligula ac
+                    pulvinar rutrum non rhoncus mauris facilisi. Quisque maximus commodo sollicitudin, montes congue
+                    imperdiet. Est malesuada vivamus vestibulum ante aenean class. Per integer aptent ullamcorper
+                    sagittis
+                    posuere dignissim morbi scelerisque. Fringilla primis sagittis lorem erat integer; vulputate nullam.
+                    Porta purus habitant id fermentum nec ex, proin mauris sem.
+                </p>
+
+                <!-- Second paragraph of placeholder text -->
+                <p>
+                    Lectus ultrices nibh lobortis tempus facilisis sit conubia taciti. Non torquent amet nibh elit ante
+                    fermentum praesent cras. Et suspendisse egestas eros erat aptent sollicitudin. Nulla tortor purus
+                    posuere
+                    auctor himenaeos malesuada. Turpis phasellus enim venenatis aliquam pellentesque senectus, id
+                    ultrices.
+                    Praesent tellus consequat phasellus cubilia mattis mauris natoque litora. Fringilla cursus montes
+                    inceptos nec venenatis platea.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- Gallery section: displays media (video + images) in rows -->
+        <section id="gallery" class="gallery">
+
+            <!-- Row 1: contains one video and one image -->
+            <div class="gallery-row">
+                <video controls>
+                    <!-- Video file source -->
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+
+                <!-- Image of a foggy railway station -->
+                <img src="img4598.jpg" alt="Foggy railway station lights">
+            </div>
+
+            <!-- Row 2: contains two images -->
+            <div class="gallery-row">
+                <!-- Image of a vintage camera -->
+                <img src="img4532.jpg" alt="Vintage camera">
+
+                <!-- Image of a landscape with hills -->
+                <img src="photo_2018_02_01.jpg" alt="Landscape hills">
+            </div>
+
+            <!-- Row 3: contains two images -->
+            <div class="gallery-row">
+                <!-- Image of snowy mountains -->
+                <img src="photo_2018_02_3.jpg" alt="Snowy mountains">
+
+                <!-- Image of an old car outside a building -->
+                <img src="johns_car_jpg.jpg" alt="Old car outside building">
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+/* ===== BODY ===== */
+
+body {
+    background-color: #ff69b4;
+    /* Bright pink background - matches the screenshot */
+
+    font-family: Arial, sans-serif;
+    /* Clean readable font */
+
+    font-size: 18px;
+    /* Base font size */
+
+    max-width: 420px;
+    /* Narrow width like in the screenshot - keeps it centered and compact */
+
+    margin: 0 auto;
+    /* Centers the page horizontally */
+
+    padding: 15px;
+    /* Breathing room around the edges */
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    position: relative;
+    /* Lets us position the cart icon relative to the header */
+
+    text-align: center;
+    /* Centers the divider image */
+
+    padding: 5px 0;
+}
+
+header img {
+    width: 250px;
+    /* Small decorative divider image */
+
+    display: block;
+    /* Lets margin auto center it */
+
+    margin: 0 auto;
+    /* Centers the divider image */
+}
+
+header a {
+    position: absolute;
+    /* Pulls the cart out of the normal flow */
+
+    top: 5px;
+    /* Distance from the top of the header */
+
+    right: 0;
+    /* Pins it to the right edge */
+}
+
+header a img {
+    width: 40px;
+    /* Small cart icon */
+}
+
+
+/* ===== PHOTO CARDS ===== */
+
+article {
+    margin-bottom: 0;
+    /* No gap between cards - they sit right on top of each other */
+}
+
+article img {
+    width: 100%;
+    /* Photo fills the full width of the card */
+
+    height: auto;
+    /* Keeps photo proportions correct */
+
+    display: block;
+    /* Removes the gap under images */
+}
+
+
+/* ===== PHOTO CAPTIONS ===== */
+
+article p {
+    background-color: #fffde7;
+    /* Light yellow background behind the caption */
+
+    color: #00bcd4;
+    /* Cyan blue text colour - matches the screenshot */
+
+    font-weight: bold;
+    /* Bold text like in the screenshot */
+
+    font-size: 1rem;
+    /* Normal readable size */
+
+    padding: 8px 10px;
+    /* Space inside the caption box */
+
+    margin: 0;
+    /* No gap around the caption */
+}
+
+
+/* ===== BUTTON ===== */
+
+button {
+    background-color: #e0e0e0;
+    /* Light grey button */
+
+    border: 1px solid #999;
+    /* Thin border around the button */
+
+    padding: 4px 10px;
+    /* Small padding - matches the compact button in the screenshot */
+
+    font-size: 0.75rem;
+    /* Small text inside the button - matches the screenshot */
+
+    cursor: pointer;
+    /* Hand cursor when hovering */
+
+    display: block;
+    /* Makes the button sit on its own line */
+
+    margin-bottom: 10px;
+    /* Small gap below the button before the next photo */
+}
+
+button:hover {
+    background-color: #c8c8c8;
+    /* Slightly darker when hovered */
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    margin-top: 10px;
+    /* Gap above the footer */
+
+    font-size: 1rem;
+    /* Normal size text */
+
+    font-weight: bold;
+    /* Copyright text is bold - matches the screenshot */
+}
+
+footer p {
+    margin: 0 0 5px 0;
+    /* Small gap below the copyright line */
+}
+
+footer nav a {
+    display: list-item;
+    /* Each link on its own line with a bullet */
+
+    list-style-type: disc;
+    /* Adds the bullet point */
+
+    margin-left: 20px;
+    /* Indents the links to line up with the bullets */
+
+    color: #0000ee;
+    /* Blue link colour */
+
+    font-weight: normal;
+    /* Normal weight - not bold like the copyright */
+
+    font-size: 1rem;
+
+    text-decoration: underline;
+    /* Underlined like in the screenshot */
+}

@@ -1,0 +1,157 @@
+/* Base page styling: sets overall look of the page */
+body {
+    margin: 0;
+    /* Removes default browser margin */
+    background-color: #e6e6e6;
+    /* Light grey background */
+    font-family: Georgia, serif;
+    /* Main font used across the page */
+    color: #000000;
+    /* Default text colour */
+}
+
+/* Header section: contains title and navigation */
+header {
+    text-align: center; 
+    /* Centers all header content */
+    padding-top: 20px;
+    /* Space above header */
+    padding-bottom: 10px;
+    /* Space below header */
+}
+
+/* Main page title */
+h1 {
+    font-size: 78px;
+    /* Large title size */
+    margin-top: 0;
+    /* Removes extra space above */
+    margin-bottom: 22px;
+    /* Space below the title */
+}
+
+/* Navigation container */
+nav {
+    margin-bottom: 20px;
+    /* Space below navigation */
+}
+
+/* Navigation links */
+nav a {
+    font-size: 18px;
+    /* Size of link text */
+    margin: 0 32px;
+    /* Space between links */
+}
+
+/* Main content wrapper */
+main {
+    width: 75%;
+    /* Controls overall content width */
+    max-width: 1200px;
+    /* Prevents layout from getting too wide */
+    margin: 0 auto;
+    /* Centers content horizontally */
+}
+
+/* Top section: text and featured image */
+.top-section {
+    padding: 0 16px 18px 16px;
+    /* Inner spacing around section */
+}
+
+/* Text content area */
+.text-content {
+    font-size: 23px;
+    /* Readable text size */
+    line-height: 1.2;
+    /* Line spacing */
+}
+
+/* Paragraph styling inside text content */
+.text-content p {
+    margin-top: 0;
+    /* Removes space above paragraphs */
+    margin-bottom: 28px;
+    /* Space between paragraphs */
+}
+
+/* Featured image (cow) */
+.cow-image {
+    float: right;
+    /* Places image on the right side */
+    width: 420px;
+    /* Fixed width */
+    height: 420px;
+    /* Fixed height */
+    object-fit: cover;
+    /* Keeps image nicely cropped */
+    margin-left: 20px;
+    /* Space between image and text */
+    margin-bottom: 10px;
+    /* Space below image */
+    border: 2px solid #c8c8c8;
+    /* Light border around image */
+}
+
+/* Gallery section container */
+.gallery {
+    width: 100%;
+    /* Full width section */
+    clear: both;
+    /* Starts below floated elements */
+}
+
+/* Each row in the gallery */
+.gallery-row {
+    display: flex;
+    /* Places items in a row */
+    gap: 0;
+    /* No spacing between items */
+    margin: 0;
+    /* Removes default margins */
+}
+
+/* Images and video inside gallery */
+.gallery-row img,
+.gallery-row video {
+    display: block;
+    /* Removes inline spacing */
+    height: 290px;
+    /* Sets consistent height */
+    object-fit: cover;
+    /* Crops media to fit nicely */
+}
+
+/* First gallery row (video + image) */
+.gallery-row:nth-child(1) video {
+    width: 61%;
+    /* Video takes larger space */
+}
+
+.gallery-row:nth-child(1) img {
+    width: 40%;
+    /* Image takes remaining space */
+}
+
+/* Second gallery row (two images) */
+.gallery-row:nth-child(2) img:first-child {
+    width: 38%;
+    /* First image width */
+}
+
+.gallery-row:nth-child(2) img:last-child {
+    width: 65%;
+    /* Second image width */
+}
+
+/* Third gallery row (two images) */
+.gallery-row:nth-child(3) img:first-child {
+    width: 60%;
+    /* First image width */
+}
+
+.gallery-row:nth-child(3) img:last-child {
+    width: 40%;
+    /* Second image width */
+}

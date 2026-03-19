@@ -1,0 +1,55 @@
+/* Page background */
+body {
+    margin: 0;
+    background-color: #bfbfbf;
+    font-family: "Inter", sans-serif;
+}
+
+/* Main white container */
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 30px;
+}
+
+/* Main title */
+h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 95px;
+    color: #3f8f1d;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Section headings */
+h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 55px;
+    color: #3f8f1d;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Highlight box */
+.highlight {
+    background-color: #3f8f1d;
+    color: white;
+    padding: 35px;
+    border-radius: 25px;
+    margin: 40px 0;
+}
+
+.highlight h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
